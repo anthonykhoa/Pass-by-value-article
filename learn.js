@@ -16,7 +16,7 @@
 	inside the function call.
 
 	Therefore, if we want a function to be able to change an input parameter variable's
-	value to a different to a different one, we must wrap that variable inside another
+	value to a different one, we must wrap that variable inside another
 	 variable whose value is an address(an array or object)
 */
 
