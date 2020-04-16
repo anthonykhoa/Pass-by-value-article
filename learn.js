@@ -44,9 +44,10 @@
 	memory. We access values stored at different memory addresses in that chunk
 	of memory depending on the index. 
 	To give a visual:
-						a[0]	a[1]	a[2]
-						---------------------
-	Memory address:		1000	1001	1002
+
+	a[0]	a[1]	a[2]
+	---------------------
+	1000	1001	1002	<== Memory addresses
 
 	All of these memory addresses are a part of the variable arr.
 	Note that properties of objects(arrays are objects too) are not always stored
