@@ -16,16 +16,56 @@
 	inside the function call.
 
 	Therefore, if we want a function to be able to change an input parameter variable's
-	value to a different one, we must wrap that variable inside another
-	 variable whose value is an address(an array or object)
+	value to a different one, we must wrap that variable inside another variable whose
+	value is a memory address(an array or object).
+
+	Accessing values stored at particular points in memory allows us to change values
+	stored at those particular points. Think of the most simple way this can
+	occur in Javascript: declaring a variable.
+	
+	let x = "Morenita Do Brazil; 
+
+	Here, the memory address of x holds the value of "Morenita Do Brazil"
 */
 
 /*-----------------------------------------------------------------------------------
 									NOW FOR THE EXAMPLES
   -----------------------------------------------------------------------------------*/
 
+/*
+	The array inside this foreals_thisTime function call is not the same array as what
+	was passed in as an input parameter. It is a duplicate of what was originally
+	passed in as a parameter. 
 
-const foreals_thisTime = (arr) => arr[0] = "little wing vancouver";
+	Remember:	The value they store(a memory address) is the same,
+ 	 this!!		however the memory addresses of the variables themselves are different.
+
+	The memory address they hold as a value is in fact a reference to a chunk of
+	memory. We access values stored at different memory addresses in that chunk
+	of memory depending on the index. 
+	To give a visual:
+						a[0]	a[1]	a[2]
+						---------------------
+	Memory address:		1000	1001	1002
+
+	All of these memory addresses are a part of the variable arr.
+	Note that properties of objects(arrays are objects too) are not always stored
+	contiguously in memory. They are only stored contiguously in memory depending on
+	certain circumstances, such as which Javascript engine it is processed by.
+
+	So when we say arr[2], what we are really doing is accessing the value stored in
+	the memory address of arr[2], and the memory address of arr[2] is part of the
+	value of variable arr. 
+*/
+
+const foreals_thisTime = (arr) => arr[2] = "little wing vancouver 1968";
+
+/*
+	In function changeContent, we are setting the copy of the input parameter(n)
+	equal to a string. This will not affect the original input parameter that was put
+	in, because the "n" inside this function is only a copy of the original
+	input parameter.
+*/
 
 const changeContent = (n) => {
 	n = "Ohhhh maria mariaaa";
@@ -34,12 +74,12 @@ const changeContent = (n) => {
 
 const start = () => {
 	let num = 4;
-	console.log(`Num value  before function call:			${num}`);
+	console.log(`Num value  before function call:		${num}`);
 	changeContent(num);
-	console.log(`Num value after function call:		 		${num}`);
+	console.log(`Num value after function call:		 	${num}`);
 	const wrappedNum = [num];
 	foreals_thisTime(wrappedNum);
-	console.log(`Num value after arrayWrap  function call:	${wrappedNum[0]}`);
+	console.log(`Num value after arrayWrap  function call:	${wrappedNum[2]}`);
 }
 
 start();
