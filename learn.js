@@ -71,16 +71,19 @@ const foreals_thisTime = (arr) => arr[2] = "little wing vancouver 1968";
 const changeContent = (n) => {
 	n = "Ohhhh maria mariaaa";
 	console.log(`Num value during function call:			${n}`);
+	//outputs: "Ohhhh maria mariaaa"
 } 
 
 const start = () => {
 	let num = 4;
 	console.log(`Num value  before function call:		${num}`);
+	//outputs: "4"
 	changeContent(num);
 	console.log(`Num value after function call:		 	${num}`);
+	//outputs: "4"
 	const wrappedNum = [num];
 	foreals_thisTime(wrappedNum);
 	console.log(`Num value after arrayWrap  function call:	${wrappedNum[2]}`);
+	//outputs: "little wing vancouver 1968"
 }
-
 start();
