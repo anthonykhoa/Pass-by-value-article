@@ -54,9 +54,9 @@ void	change_content(char *s) {
 
 /*
 	Here, we pass in as a parameter the address of a variable that holds another
-	address. The first pointer points at the value. We are setting the value
-	stored in variable s (which is an address) to a different memory address
-	whose value is "superNoob";
+	address. The first pointer points at the value variable s contains.
+	We are setting the value stored in variable s (which is an address) to a
+	different memory address whose value is "superNoob";
 */
 
 void	foreals_thisTime(char **s) {
