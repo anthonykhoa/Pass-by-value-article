@@ -15,9 +15,9 @@
 	make a copy of itself, and it is these copies that are being worked upon
 	inside the function call.
 
-	Therefore, if we want a function to be able to change an input parameter variable's
-	value to a different one, we must wrap that variable inside another variable whose
-	value is a memory address(an array or object).
+	Therefore, if we want a function to be able to change an input parameter
+	variable's value to a different one, we must pass in as a parameter a memory
+	address(an array or object).
 
 	Accessing values stored at particular points in memory allows us to change values
 	stored at those particular points. Think of the most simple way this can
@@ -81,7 +81,8 @@ const start = () => {
 	changeContent(num);
 	console.log(`Num value after function call:		 	${num}`);
 	//outputs: "4"
-	const wrappedNum = [num];
+	//In leiu of num, we now use wrappedNum[2] to access the value we want.
+	const wrappedNum = [0, 0, 4];
 	foreals_thisTime(wrappedNum);
 	console.log(`Num value after arrayWrap  function call:	${wrappedNum[2]}`);
 	//outputs: "little wing vancouver 1968"
