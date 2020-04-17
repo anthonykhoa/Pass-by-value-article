@@ -49,7 +49,7 @@
 	---------------------
 	1000	1001	1002	<== Memory addresses
 
-	All of these memory addresses are a part of the variable arr.
+	All of these memory addresses are a part of the value that variable arr holds.
 	Note that properties of objects(arrays are objects too) are not always stored
 	contiguously in memory. They are only stored contiguously in memory depending on
 	certain circumstances, such as which Javascript engine it is processed by.
