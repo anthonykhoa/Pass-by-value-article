@@ -23,7 +23,7 @@
 	stored at those particular points. Think of the most simple way this can
 	occur in Javascript: declaring a variable.
 	
-	let x = "Morenita Do Brazil; 
+	let x = "Morenita Do Brazil"; 
 
 	Here, the memory address of x holds the value of "Morenita Do Brazil"
 */
@@ -37,8 +37,8 @@
 	was passed in as an input parameter. It is a duplicate of what was originally
 	passed in as a parameter. 
 
-	Remember:	The value they store(a memory address) is the same,
- 	 this!!		however the memory addresses of the variables themselves are different.
+	REMEMBER	:	The value they store(a memory address) is the same, however
+ 	  THIS		:	the memory addresses of the variables themselves are different.
 
 	The memory address they hold as a value is in fact a chunk of memory. We access
 	values stored at different memory addresses in that chunk of memory depending on
