@@ -37,8 +37,8 @@
 	was passed in as an input parameter. It is a duplicate of what was originally
 	passed in as a parameter. 
 
-	REMEMBER	:	The value they store(a memory address) is the same, however
- 	  THIS		:	the memory addresses of the variables themselves are different.
+	REMEMBER	: The value they store(a memory address) is the same, however
+ 	  THIS		: the memory addresses of the variables themselves are different.
 
 	The memory address they hold as a value is in fact a chunk of memory. We access
 	values stored at different memory addresses in that chunk of memory depending on
