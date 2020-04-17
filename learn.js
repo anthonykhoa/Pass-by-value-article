@@ -15,8 +15,8 @@
 	inside the function call.
 
 	Therefore, it is impossible to change an input parameter's value to a different one.
-	The solution to this problem is to pass in as a parameter value a memory
-	address(an array or object), in order to then access that memory address and change
+	The solution to this problem is to pass in a memory address(an array or object) as
+	a parameter value in order to then access that memory address and change
 	the value that it holds.
 
 	Accessing values stored at particular points in memory allows us to change values
