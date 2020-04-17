@@ -5,40 +5,39 @@
 	function, but that is still pass-by-value. It is copying the value of
 	the variable(an address), into the function.
 
-	Overwriting the copy of the original reference itself won't
-	cause any change to the actual parameter you input in.
-	True pass-by-reference means that the formal and actual parameters refer
-	to the same object in memory, so any changes to the formal parameter also
-	affect the actual parameter. When a function is called, the input parameters go
-	through a process of becoming duplicated -- each input parameter will
-	make a copy of itself, and it is these copies that are being worked upon
-	inside the function call.
+	Overwriting the copy of the original reference itself won't cause any change
+	to the actual parameter you input in. True pass-by-reference means that the
+	formal and actual parameters refer to the same object in memory, so any changes
+	to the formal parameter also affect the actual parameter. When a function is
+	called, the input parameters go through a process of becoming duplicated -- each
+	input parameter will make a copy of itself, and it is these copies that are being
+	worked upon inside the function call.
 
 	Therefore, it is impossible to change an input parameter's value to a different one.
 	The solution to this problem is to pass in a memory address(an array or object) as
-	a parameter value in order to then access that memory address and change
-	the value that it holds.
+	a parameter value in order to then access that memory address and change the value
+	that it holds.
 
 	Accessing values stored at particular points in memory allows us to change values
-	stored at those particular points. Think of the most simple way this can
-	occur in Javascript: declaring a variable.
+	stored at those particular points. Think of the most simple way this can occur in
+	Javascript: declaring a variable.
 	
 	let x = "Morenita Do Brazil"; 
 
 	Here, the memory address of x holds the value of "Morenita Do Brazil"
 */
 
-/*-----------------------------------------------------------------------------------
-								NOW FOR THE EXAMPLES
-  -----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------
+                                   NOW FOR THE EXAMPLES
+  ----------------------------------------------------------------------------------------*/
 
 /*
 	The array inside this foreals_thisTime function call is not the same array as what
 	was passed in as an input parameter. It is a duplicate of what was originally
 	passed in as a parameter. 
 
-	REMEMBER	: The value they store(a memory address) is the same, however
- 	  THIS		: the memory addresses of the variables themselves are different.
+	REMEMBER  : The value they store(a memory address) is the same, however
+ 	  THIS    : the memory addresses of the variables themselves are different.
 
 	The memory address they hold as a value is in fact a chunk of memory. We access
 	values stored at different memory addresses in that chunk of memory depending on
