@@ -3,7 +3,7 @@
 	pass-by-reference we are passing an alias/copy of the variable to a function.
 	Javascript can pass an address(like an object, function, or array) into a
 	function, but that is still pass-by-value. It is copying the value of
-	 the variable(an address), into the function.
+	the variable(an address), into the function.
 
 	Overwriting the copy of the original reference itself won't
 	cause any change to the actual parameter you input in.
@@ -14,9 +14,10 @@
 	make a copy of itself, and it is these copies that are being worked upon
 	inside the function call.
 
-	Therefore, if we want a function to be able to change an input parameter
-	variable's value to a different one, we must pass in as a parameter a memory
-	address(an array or object).
+	Therefore, it is impossible to change an input parameter's value to a different one.
+	The solution to this problem is to pass in as a parameter value a memory
+	address(an array or object), in order to then access that memory address and change
+	the value that it holds.
 
 	Accessing values stored at particular points in memory allows us to change values
 	stored at those particular points. Think of the most simple way this can
