@@ -41,16 +41,15 @@ void	change_content(char *s) {
 	int i = -1;
 	while (++i < 8)
 		s[i] = i + 48;
-	printf("VALUE OF s[0] INSIDE FUNC CALL &s[0]:		%p\n\n", &s[0]);
-	printf("VALUE OF s INSIDE FUNC CALL:			%p\n\n", s);
+	printf("value of s inside func call:			%s\n\n", s);
 	char *str = "hellllll";
-	printf("ADDRESS OF S INSIDE FUNC CALL:			%p\n\n", &s);
+	printf("address of s inside func call:			%p\n\n", &s);
 	s = str; 			
 	/*
 		TAKE NOTE THAT "s = str" WONT DO ANYTHING TO DO THE ACTUAL S 
 		THAT WAS PUT IN AS A FUNCTION PARAMETER
 	*/
-	printf("STRING INSIDE FUNCTION:				%s\n\n", s);
+	printf("string inside function:				%s\n\n", s);
 }
 
 /*
@@ -62,18 +61,18 @@ void	change_content(char *s) {
 
 void	foreals_thisTime(char **s) {
 	*s = "superNoob";
+	printf("Address of s inside double pointer function:	%p\n\n", s);
 }
 
 int main() {
 	char *s = malloc(sizeof(char) * 8);
 	s[0] = '\0';
-	printf("VALUE OF VARIABLE BEFORE FUNC CALL:		%p\n\n", &s[0]);
-	printf("STRING BEFORE FUNC CALL: %s\n\n", s);
-	printf("ADDRESS OF S BEFORE FUNC CALL:			%p\n\n", &s);
+	printf("string before func call: %s\n\n", s);
+	printf("address of s before func call:			%p\n\n", &s);
 	change_content(s);
-	printf("ADDRESS OF S AFTER FUNC CALL:			%p\n\n", &s);
-	printf("VALUE OF VARIABLE AFTER FUNC CALL: 		%p\n\n", &s[0]);
-	printf("STRING AFTER SINGLE POINTER FUNC CALL:		%s\n\n",  s);
+	printf("address of s after func call:			%p\n\n", &s);
+	printf("string after single pointer func call:		%s\n\n",  s);
 	foreals_thisTime(&s);
 	printf("string after passing as double pointer:		%s\n\n", s); 
+	printf("address after passing as double pointer:	%p\n\n", &s);
 }
