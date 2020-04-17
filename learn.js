@@ -1,10 +1,9 @@
 /*
-	Everything in javascript, is in a strict sense pass-by-value.
-	When we pass-by-reference we are passing an alias/copy
-	of the variable to a function.
+	Everything in Javascript, is in a strict sense pass-by-value. When we
+	pass-by-reference we are passing an alias/copy of the variable to a function.
 	Javascript can pass an address(like an object, function, or array) into a
 	function, but that is still pass-by-value. It is copying the value of
-	variable(an address), into the function.
+	 the variable(an address), into the function.
 
 	Overwriting the copy of the original reference itself won't
 	cause any change to the actual parameter you input in.
@@ -29,7 +28,7 @@
 */
 
 /*-----------------------------------------------------------------------------------
-									NOW FOR THE EXAMPLES
+								NOW FOR THE EXAMPLES
   -----------------------------------------------------------------------------------*/
 
 /*
@@ -40,9 +39,10 @@
 	Remember:	The value they store(a memory address) is the same,
  	 this!!		however the memory addresses of the variables themselves are different.
 
-	The memory address they hold as a value is in fact a reference to a chunk of
-	memory. We access values stored at different memory addresses in that chunk
-	of memory depending on the index. 
+	The memory address they hold as a value is in fact a chunk of memory. We access
+	values stored at different memory addresses in that chunk of memory depending on
+	the index. 
+
 	To give a visual:
 
 	a[0]	a[1]	a[2]
@@ -76,7 +76,7 @@ const changeContent = (n) => {
 
 const start = () => {
 	let num = 4;
-	console.log(`Num value  before function call:		${num}`);
+	console.log(`Num value before function call:			${num}`);
 	//outputs: "4"
 	changeContent(num);
 	console.log(`Num value after function call:		 	${num}`);
